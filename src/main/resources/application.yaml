@@ -4,11 +4,8 @@ server:
     whitelabel:
       enabled: false
 spring:
-  r2dbc:
-    username: user
-    password: password
-    url: r2dbc:mysql://localhost:3306/website
-    name: website
+  profiles:
+    active: dev
   webflux:
     static-path-pattern: /static/**
   thymeleaf:
