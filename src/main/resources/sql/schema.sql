@@ -32,9 +32,10 @@ CREATE TABLE `website`.`posts`
     `title`         VARCHAR(64)  NOT NULL,
     `brief`         VARCHAR(256) NOT NULL,
     `content`       LONGTEXT     NOT NULL,
+    `image_url`     VARCHAR(256),
+    `display_order` INT UNSIGNED DEFAULT 0,
     `create_time`   INT(11)      NOT NULL,
     `update_time`   INT(11),
-    `display_order` INT UNSIGNED DEFAULT 0,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`tag_id`) REFERENCES tags (`id`),
     UNIQUE INDEX (`tag_id`, `title`)

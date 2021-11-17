@@ -25,10 +25,12 @@ public class Post {
 
     private String content;
 
+    private String imageUrl;
+
+    private int displayOrder;
+
     private long createTime;
 
     private long updateTime;
-
-    private int displayOrder;
 
 }

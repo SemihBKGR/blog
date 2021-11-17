@@ -17,7 +17,7 @@ public class Subject {
 
     private String explanation;
 
-    private String imageUri;
+    private String imageUrl;
 
     private int displayOrder;
 

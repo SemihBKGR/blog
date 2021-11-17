@@ -15,13 +15,13 @@ public class Tag {
     private int id;
 
     @Column("subject_id")
-    private String subjectId;
+    private int subjectId;
 
     private String name;
 
     private String explanation;
 
-    private String imageUri;
+    private String imageUrl;
 
     private int displayOrder;
 
