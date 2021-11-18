@@ -9,6 +9,6 @@ public interface PostService {
 
     Mono<Post> findByTitle(String title);
 
-    Flux<PostInfo> findLastlySharedPosts(String subjectName);
+    Flux<PostInfo> findLast3PostInfos(String subjectName);
 
 }

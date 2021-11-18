@@ -20,8 +20,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Flux<PostInfo> findLastlySharedPosts(String subjectName) {
-        return postRepository.findLast3Posts(subjectName);
+    public Flux<PostInfo> findLast3PostInfos(String subjectName) {
+        return postRepository.findLast3PostInfos(subjectName);
     }
 
 }

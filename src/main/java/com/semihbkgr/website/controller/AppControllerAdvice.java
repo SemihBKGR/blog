@@ -6,7 +6,7 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Mono;
 
 @ControllerAdvice
-public class ErrorControllerAdvice {
+public class AppControllerAdvice {
 
     @ExceptionHandler(ResponseStatusException.class)
     public Mono<String> handleResponseStatus(ResponseStatusException ex) {

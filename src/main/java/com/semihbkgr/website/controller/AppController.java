@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
 
 @Controller
 @RequiredArgsConstructor
-public class HomeController {
+public class AppController {
 
     private final SubjectService subjectService;
     private final PostService postService;
@@ -23,11 +23,17 @@ public class HomeController {
                 .flatMapMany(subjects -> {
                     model.addAttribute("subjects", subjects);
                     return Flux.fromIterable(subjects)
-                            .map(subject -> postService.findByTitle(subject.getName()));
+                            .flatMap(subject -> postService
+                                    .findLast3PostInfos(subject.getName()));
                 })
                 .collectList()
-                .doOnNext(posts -> model.addAttribute("posts", posts))
+                .doOnNext(postInfos -> model.addAttribute("postInfos", postInfos))
                 .thenReturn("home");
+    }
+
+    @GetMapping("/about")
+    public Mono<String> about(){
+        return Mono.just("about");
     }
 
 }
