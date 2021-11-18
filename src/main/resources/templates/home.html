@@ -24,19 +24,23 @@
 </nav>
 <div class="container">
     <ul class="list-group">
-        <li class="list-group-item" th:each="subject: ${subjects}">
-            <div class="text-center">
+        <li class="list-group-item border-0" th:each="subject: ${subjects}">
+            <div>
                 <a th:href="${subject.name}" th:if="${subject.imageUrl}!=null">
-                    <img alt="subject image" th:src="${subject.imageUrl}">
+                    <img alt="subject image" height="150" th:src="${subject.imageUrl}" width="250">
                 </a>
-                <a class="text-decoration-none" th:href="${subject.name}">
+                <a class="text-decoration-none text-dark" th:href="${subject.name}">
                     <h3>[[${subject.name}]]</h3>
                 </a>
                 <p>[[${subject.explanation}]]</p>
                 <div>
-                    <ul>
-                        <li th:each="post: ${posts}">
-
+                    <ul class="list-group ">
+                        <li class="post-info list-group-item border-0" th:each="postInfo: ${postInfos}"
+                            th:if="${postInfo.subjectId}==${subject.id}">
+                            <a class="text-decoration-none text-secondary" th:href="'/post/'+${postInfo.title}">
+                                <h5 class="post-title">[[${postInfo.title}]]</h5>
+                            </a>
+                            <p class="post-date">[[${postInfo.createTime}]]</p>
                         </li>
                     </ul>
                 </div>
@@ -51,5 +55,13 @@
 <script crossorigin="anonymous"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/static/index.js"></script>
+
+<script>
+    const dates = document.getElementsByClassName("post-date")
+    for (let date of dates)
+        date.textContent = convertUnixTimeToDate(date.textContent)
+</script>
+
 </body>
 </html>

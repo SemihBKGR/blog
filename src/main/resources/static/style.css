@@ -1,5 +1,18 @@
 div.container {
-    width: 70%;
+    width: 30%;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
+}
+
+.post-info {
+    padding: 0;
+}
+
+.post-title {
+    display: inline-block;
+}
+
+.post-date {
+    display: inline-block;
+    float: right;
 }
