@@ -3,16 +3,16 @@ VALUES (1, 'subject-01', 'subject-01 explanation', 'subject-01', '/static/images
        (2, 'subject-02', 'subject-02 explanation', 'subject-02', '/static/images/blue.png', 2),
        (3, 'subject-03', 'subject-03 explanation', 'subject-03', '/static/images/blue.png', 3);
 
-INSERT INTO website.tags (`id`, `subject_id`, `name`, `explanation`, `display_order`)
-VALUES (1, 1, 'tag-01', 'tag-01 explanation', 1),
-       (2, 2, 'tag-02', 'tag-02 explanation', 1),
-       (3, 3, 'tag-03', 'tag-03 explanation', 1),
-       (4, 1, 'tag-04', 'tag-04 explanation', 2),
-       (5, 2, 'tag-05', 'tag-05 explanation', 2),
-       (6, 3, 'tag-06', 'tag-06 explanation', 2),
-       (7, 1, 'tag-07', 'tag-07 explanation', 3),
-       (8, 2, 'tag-08', 'tag-08 explanation', 3),
-       (9, 3, 'tag-09', 'tag-09 explanation', 3);
+INSERT INTO website.tags (`id`, `subject_id`, `name`, `explanation`, `image_url`, `display_order`)
+VALUES (1, 1, 'tag-01', 'tag-01 explanation', '/static/images/blue.png', 1),
+       (2, 2, 'tag-02', 'tag-02 explanation', '/static/images/blue.png', 1),
+       (3, 3, 'tag-03', 'tag-03 explanation', '/static/images/blue.png', 1),
+       (4, 1, 'tag-04', 'tag-04 explanation', '/static/images/blue.png', 2),
+       (5, 2, 'tag-05', 'tag-05 explanation', '/static/images/blue.png', 2),
+       (6, 3, 'tag-06', 'tag-06 explanation', '/static/images/blue.png', 2),
+       (7, 1, 'tag-07', 'tag-07 explanation', '/static/images/blue.png', 3),
+       (8, 2, 'tag-08', 'tag-08 explanation', '/static/images/blue.png', 3),
+       (9, 3, 'tag-09', 'tag-09 explanation', '/static/images/blue.png', 3);
 
 INSERT INTO website.posts(`tag_id`, `title`, `brief`, `content`, `url_endpoint`, `image_url`, `display_order`,
                           `create_time`)

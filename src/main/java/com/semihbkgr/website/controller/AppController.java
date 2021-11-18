@@ -35,8 +35,8 @@ public class AppController {
     @GetMapping("/{url-endpoint}")
     public Mono<String> subject(@PathVariable("url-endpoint") String urlEndpoint, Model model) {
         return subjectService.findByUrlEndpoint(urlEndpoint)
-                .doOnNext(subject -> model.addAttribute("subject", subject))
-                .map(subject -> tagService
+                .doOnNext(subject -> model.addAttribute("currentSubject", subject))
+                .flatMap(subject -> tagService
                         .findAllBySubjectId(subject.getId())
                         .collectList()
                         .doOnNext(tags -> model.addAttribute("tags", tags))

@@ -7,7 +7,7 @@
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet">
     <link href="/static/style.css" rel="stylesheet">
-    <title>[[${subject.name}]]</title>
+    <title>[[${currentSubject.name}]]</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,10 +19,39 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" th:href="'/'+${subject.urlEndpoint}" th:each="subject: ${subjects}">[[${subject.name}]]</a>
+            <span th:each="subject: ${subjects}">
+                <a class="nav-item nav-link active" href=javascript:void(0) th:if="${subject.id}==${currentSubject.id}">[[${subject.name}]]</a>
+                <a class="nav-item nav-link" th:href="'/'+${subject.urlEndpoint}"
+                   th:unless="${subject.id}==${currentSubject.id}">[[${subject.name}]]</a>
+            </span>
         </div>
     </div>
 </nav>
+
+<div class="container">
+    <div>
+        <h1 class="text-dark">[[${currentSubject.name}]]</h1>
+        <p>[[${currentSubject.explanation}]]</p>
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="tag-info list-group-item border-0" th:each="tag: ${tags}">
+                <h3 class="text-dark">[[${tag.name}]]</h3>
+                <img alt="tag image" th:if="${tag.imageUrl}!=null" th:src="${tag.imageUrl}" width="50%">
+                <p>[[${tag.explanation}]]</p>
+                <ul class="list-group">
+                    <li class="post-info list-group-item border-0" th:each="postInfo: ${postInfos}"
+                        th:if="${postInfo.tagId}==${tag.id}">
+                        <a class="text-decoration-none text-secondary" th:href="'/post/'+${postInfo.urlEndpoint}">
+                            <h5 class="post-title">[[${postInfo.title}]]</h5>
+                        </a>
+                        <p class="post-date">[[${postInfo.createTime}]]</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <script crossorigin="anonymous"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

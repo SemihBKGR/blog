@@ -1,5 +1,5 @@
 div.container {
-    width: 30%;
+    max-width: 500px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
@@ -15,4 +15,9 @@ div.container {
 .post-date {
     display: inline-block;
     float: right;
+}
+
+.tag-info{
+    padding: 0;
+    margin-top: 20px;
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="javascript:void(0)">Website</a>
+    <a class="navbar-brand" href=javascript:void(0)>Website</a>
     <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
             class="navbar-toggler"
             data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
@@ -19,7 +19,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" th:each="subject: ${subjects}" th:href="'/'+${subject.urlEndpoint}">[[${subject.name}]]</a>
+            <a class="nav-item nav-link" th:each="subject: ${subjects}" th:href="'/'+${subject.urlEndpoint}">[[${subject.name}]]</a>
         </div>
     </div>
 </nav>
@@ -28,7 +28,7 @@
         <li class="list-group-item border-0" th:each="subject: ${subjects}">
             <div>
                 <a th:href="${subject.urlEndpoint}" th:if="${subject.imageUrl}!=null">
-                    <img alt="subject image" height="150" th:src="${subject.imageUrl}" width="250">
+                    <img alt="subject image" th:src="${subject.imageUrl}" width="50%">
                 </a>
                 <a class="text-decoration-none text-dark" th:href="${subject.urlEndpoint}">
                     <h3>[[${subject.name}]]</h3>
