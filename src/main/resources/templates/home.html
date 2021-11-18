@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico" />
+    <link href="/static/images/favicon.ico" rel="icon" type="image/x-icon"/>
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet">
     <link href="/static/style.css" rel="stylesheet">
@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="javascript:void(0)">Website</a>
     <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
             class="navbar-toggler"
             data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
@@ -19,7 +19,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#" th:each="subject: ${subjects}">[[${subject.name}]]</a>
+            <a class="nav-item nav-link active" th:each="subject: ${subjects}" th:href="'/'+${subject.urlEndpoint}">[[${subject.name}]]</a>
         </div>
     </div>
 </nav>

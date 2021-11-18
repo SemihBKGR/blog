@@ -5,6 +5,7 @@ import com.semihbkgr.website.repository.SubjectRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
@@ -15,6 +16,11 @@ public class SubjectServiceImpl implements SubjectService {
     @Override
     public Flux<Subject> findAll() {
         return subjectRepository.findAllByOrderByDisplayOrderAsc();
+    }
+
+    @Override
+    public Mono<Subject> findByUrlEndpoint(String urlEndpoint) {
+        return subjectRepository.findByUrlEndpoint(urlEndpoint);
     }
 
 }

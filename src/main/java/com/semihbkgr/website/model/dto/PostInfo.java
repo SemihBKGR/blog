@@ -17,6 +17,9 @@ public class PostInfo {
     @Column("subject_id")
     private int subjectId;
 
+    @Column("tag_id")
+    private int tagId;
+
     private String title;
 
     private String urlEndpoint;
