@@ -17,6 +17,8 @@ public class Subject {
 
     private String explanation;
 
+    private String urlEndpoint;
+
     private String imageUrl;
 
     private int displayOrder;

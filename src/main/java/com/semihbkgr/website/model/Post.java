@@ -25,6 +25,8 @@ public class Post {
 
     private String content;
 
+    private String urlEndpoint;
+
     private String imageUrl;
 
     private int displayOrder;
