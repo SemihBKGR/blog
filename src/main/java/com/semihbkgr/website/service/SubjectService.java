@@ -6,6 +6,8 @@ import reactor.core.publisher.Mono;
 
 public interface SubjectService {
 
+    Mono<Subject> find(int id);
+
     Mono<Subject> find(String urlEndpoint);
 
     Flux<Subject> findAll();

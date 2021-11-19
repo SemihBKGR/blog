@@ -13,6 +13,10 @@ public class SubjectServiceImpl implements SubjectService {
 
     private final SubjectRepository subjectRepository;
 
+    @Override
+    public Mono<Subject> find(int id) {
+        return subjectRepository.findById(id);
+    }
 
     @Override
     public Mono<Subject> find(String urlEndpoint) {
