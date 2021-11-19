@@ -1,8 +1,8 @@
 package com.semihbkgr.website.controller;
 
+import com.semihbkgr.website.service.CategoryService;
 import com.semihbkgr.website.service.PostService;
 import com.semihbkgr.website.service.SubjectService;
-import com.semihbkgr.website.service.TagService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +16,7 @@ import reactor.core.publisher.Mono;
 public class AppController {
 
     private final SubjectService subjectService;
-    private final TagService tagService;
+    private final CategoryService tagService;
     private final PostService postService;
 
     @GetMapping("/")
@@ -26,7 +26,7 @@ public class AppController {
                 .doOnNext(subjects -> model.addAttribute("subjects", subjects))
                 .flatMapMany(subjects -> Flux.fromIterable(subjects)
                         .flatMap(subject -> postService
-                                .findLast3PostInfosBySubjectId(subject.getId())))
+                                .findLastInfos(subject.getId())))
                 .collectList()
                 .doOnNext(postInfos -> model.addAttribute("postInfos", postInfos))
                 .thenReturn("home");
@@ -34,13 +34,13 @@ public class AppController {
 
     @GetMapping("/{url-endpoint}")
     public Mono<String> subject(@PathVariable("url-endpoint") String urlEndpoint, Model model) {
-        return subjectService.findByUrlEndpoint(urlEndpoint)
+        return subjectService.find(urlEndpoint)
                 .doOnNext(subject -> model.addAttribute("currentSubject", subject))
                 .flatMap(subject -> tagService
                         .findAllBySubjectId(subject.getId())
                         .collectList()
                         .doOnNext(tags -> model.addAttribute("tags", tags))
-                        .thenMany(postService.findAllPostInfosBySubjectId(subject.getId()))
+                        .thenMany(postService.findAllInfos(subject.getId()))
                         .collectList()
                         .doOnNext(postInfos -> model.addAttribute("postInfos", postInfos)))
                 .thenMany(subjectService.findAll())

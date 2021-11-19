@@ -13,14 +13,15 @@ public class SubjectServiceImpl implements SubjectService {
 
     private final SubjectRepository subjectRepository;
 
+
     @Override
-    public Flux<Subject> findAll() {
-        return subjectRepository.findAllByOrderByDisplayOrderAsc();
+    public Mono<Subject> find(String urlEndpoint) {
+        return subjectRepository.findByUrlEndpoint(urlEndpoint);
     }
 
     @Override
-    public Mono<Subject> findByUrlEndpoint(String urlEndpoint) {
-        return subjectRepository.findByUrlEndpoint(urlEndpoint);
+    public Flux<Subject> findAll() {
+        return subjectRepository.findAllByOrderByDisplayOrderAsc();
     }
 
 }

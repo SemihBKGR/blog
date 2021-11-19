@@ -14,19 +14,20 @@ public class PostServiceImpl implements PostService {
 
     private final PostRepository postRepository;
 
+
     @Override
-    public Mono<Post> findByTitle(String title) {
-        return postRepository.findByTitle(title);
+    public Mono<Post> find(String subjectUrl, String postUrl) {
+        return postRepository.findBySubjectUrlEndpointAndPostUrlEndpoint(subjectUrl,postUrl);
     }
 
     @Override
-    public Flux<PostInfo> findLast3PostInfosBySubjectId(int subjectId) {
-        return postRepository.findLast3PostInfosBySubjectId(subjectId);
+    public Flux<PostInfo> findLastInfos(int subjectId) {
+        return postRepository.findTop3BySubjectIdOrderByCreateTimeDesc(subjectId);
     }
 
     @Override
-    public Flux<PostInfo> findAllPostInfosBySubjectId(int subjectId) {
-        return postRepository.findAllPostInfosBySubjectId(subjectId);
+    public Flux<PostInfo> findAllInfos(int subjectId) {
+        return postRepository.findAllBySubjectIdOrderByDisplayOrderAsc(subjectId);
     }
 
 }

@@ -7,10 +7,10 @@ import reactor.core.publisher.Mono;
 
 public interface PostService {
 
-    Mono<Post> findByTitle(String title);
+    Mono<Post> find(String subjectUrl, String postUrl);
 
-    Flux<PostInfo> findLast3PostInfosBySubjectId(int subjectId);
+    Flux<PostInfo> findLastInfos(int subjectId);
 
-    Flux<PostInfo> findAllPostInfosBySubjectId(int subjectId);
+    Flux<PostInfo> findAllInfos(int subjectId);
 
 }
