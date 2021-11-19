@@ -16,8 +16,11 @@ public class Post {
     @Id
     private int id;
 
-    @Column("tag_id")
-    private int tagId;
+    @Column("subject_id")
+    private int subjectId;
+
+    @Column("category_id")
+    private int categoryId;
 
     private String title;
 

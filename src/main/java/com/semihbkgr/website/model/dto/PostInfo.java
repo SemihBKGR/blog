@@ -17,12 +17,14 @@ public class PostInfo {
     @Column("subject_id")
     private int subjectId;
 
-    @Column("tag_id")
-    private int tagId;
+    @Column("category_id")
+    private int categoryId;
 
     private String title;
 
     private String urlEndpoint;
+
+    private int displayOrder;
 
     private long createTime;
 

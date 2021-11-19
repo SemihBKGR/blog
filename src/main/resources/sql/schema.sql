@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS `website`.`posts`;
-DROP TABLE IF EXISTS `website`.`tags`;
+DROP TABLE IF EXISTS `website`.`categories`;
 DROP TABLE IF EXISTS `website`.`subjects`;
 
 CREATE TABLE `website`.`subjects`
@@ -15,23 +15,22 @@ CREATE TABLE `website`.`subjects`
     UNIQUE INDEX (url_endpoint)
 );
 
-CREATE TABLE `website`.`tags`
+CREATE TABLE `website`.`categories`
 (
     `id`            INT AUTO_INCREMENT,
-    `subject_id`    INT         NOT NULL,
-    `name`          VARCHAR(16) NOT NULL,
+    `name`          VARCHAR(32) NOT NULL,
     `explanation`   VARCHAR(256),
     `image_url`     VARCHAR(256),
     `display_order` INT UNSIGNED DEFAULT 0,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`subject_id`) REFERENCES `website`.`subjects` (`id`),
-    UNIQUE INDEX (`subject_id`, `name`)
+    UNIQUE INDEX (name)
 );
 
 CREATE TABLE `website`.`posts`
 (
     `id`            INT AUTO_INCREMENT,
-    `tag_id`        INT          NOT NULL,
+    `subject_id`    INT          NOT NULL,
+    `category_id`   INT          NOT NULL,
     `title`         VARCHAR(64)  NOT NULL,
     `brief`         VARCHAR(256) NOT NULL,
     `content`       LONGTEXT     NOT NULL,
@@ -41,7 +40,8 @@ CREATE TABLE `website`.`posts`
     `create_time`   INT(11)      NOT NULL,
     `update_time`   INT(11),
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`tag_id`) REFERENCES tags (`id`),
-    UNIQUE INDEX (`url_endpoint`),
-    UNIQUE INDEX (`tag_id`, `title`)
+    FOREIGN KEY (`subject_id`) REFERENCES subjects (`id`),
+    FOREIGN KEY (`category_id`) REFERENCES categories (`id`),
+    UNIQUE INDEX (`subject_id`, `url_endpoint`),
+    UNIQUE INDEX (`subject_id`, `title`)
 );
