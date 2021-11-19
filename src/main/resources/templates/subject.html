@@ -27,16 +27,22 @@
         </div>
     </div>
 </nav>
-
 <div class="container">
     <div>
         <h1 class="text-dark">[[${currentSubject.name}]]</h1>
         <p>[[${currentSubject.explanation}]]</p>
+        <div>
+            <ul class="list-group">
+                <li th:each="category: ${categories}" class="category-list list-group-item border-0">
+                    <a th:href="'#'+${category.name}">[[${category.name}]]</a>
+                </li>
+            </ul>
+        </div>
     </div>
     <div>
         <ul class="list-group">
             <li class="tag-info list-group-item border-0" th:each="category: ${categories}">
-                <h3 class="text-dark">[[${category.name}]]</h3>
+                <h3 th:id="${category.name}" class="text-dark">[[${category.name}]]</h3>
                 <img alt="tag image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}" width="50%">
                 <p>[[${category.explanation}]]</p>
                 <ul class="list-group">
@@ -52,7 +58,6 @@
         </ul>
     </div>
 </div>
-
 <script crossorigin="anonymous"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -65,6 +70,5 @@
     for (let date of dates)
         date.textContent = convertUnixTimeToDate(date.textContent)
 </script>
-
 </body>
 </html>
