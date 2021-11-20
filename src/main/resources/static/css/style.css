@@ -1,27 +1,51 @@
-div.container {
-    max-width: 500px;
+.container {
+    max-width: 700px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
 
-.post-info {
+.subject{
+    width: 300px;
+    margin: auto;
+}
+
+.category{
+    width: 500px;
+    margin: auto;
+}
+
+.post-list {
     padding: 0;
 }
 
 .post-title {
     display: inline-block;
+    width: 70%;
 }
 
-.post-date {
+.post-date-small {
     display: inline-block;
     float: right;
+    font-size: small;
+    width: 25%;
 }
 
-.tag-info{
-    padding: 0;
-    margin-top: 20px;
+.post-date-medium {
+    display: inline-block;
+    float: right;
+    font-size: medium;
+    width: 25%;
+}
+
+.category-top{
+    width: 500px;
+    margin: auto;
 }
 
 .category-list{
     padding: 0;
+}
+
+.category-list-icon{
+    font-size: small;
 }
