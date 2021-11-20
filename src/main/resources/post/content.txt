@@ -1,11 +1,3 @@
-BRIEF
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit neque vel leo convallis iaculis. Aliquam
-erat volutpat. Nulla auctor convallis enim eget tincidunt. Nullam maximus lacus porttitor sodales semper. Proin in
-varius quam. Vivamus id sodales nulla, a aliquet augue. Donec eget nibh diam. Maecenas fermentum condimentum posuere.
-Aenean non diam ornare diam semper molestie at ut metus. Fusce hendrerit augue a arcu semper, id rhoncus elit egestas.
-Praesent sed nisl non ex semper tristique sed nec metus.
-
-CONTENT
 <ul class="list-group">
 <li class="list-group-item border-0"><a href="#subtitle-01"><span class="material-icons">double_arrow</span> subtitle-01</a></li>
 <li class="list-group-item border-0"><a href="#subtitle-02"><span class="material-icons">double_arrow</span> subtitle-02</a></li>
@@ -49,7 +41,18 @@ rutrum massa. In tempor ullamcorper felis eu gravida.
 <h3 id="subtitle-04"><a href="#subtitle-04">subtitle-04</a></h3>
 <p>
 Fusce pulvinar ligula sit amet consequat aliquam. Duis facilisis ultricies elit ut commodo. Pellentesque et nibh sit
-amet nulla viverra congue ut eget augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+amet nulla viverra congue ut eget augue.
+<pre><code class="language-java">
+@SpringBootApplication(proxyBeanMethods = false)
+public class WebsiteApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(WebsiteApplication.class, args);
+    }
+
+}
+</code></pre>
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
 inceptos himenaeos. Morbi vel pulvinar nisl, sit amet pretium libero. Donec ac laoreet lorem, quis imperdiet ligula.
 Aliquam nec leo mattis dui cursus ultrices. Vestibulum venenatis tellus massa, pellentesque sagittis justo gravida
 eget. Suspendisse potenti.
@@ -68,7 +71,18 @@ magna vitae arcu imperdiet feugiat dapibus hendrerit enim.
 <h3 id="subtitle-06"><a href="#subtitle-06">subtitle-06</a></h3>
 <p>
 Praesent in lorem leo. Fusce libero enim, blandit vel feugiat id, volutpat ac nisi. Mauris dapibus, metus vitae dictum
-sodales, ligula nisi imperdiet ante, et hendrerit nunc metus eu mi. Interdum et malesuada fames ac ante ipsum primis in
+sodales, ligula nisi imperdiet ante, et hendrerit nunc metus eu mi.
+<pre><code class="language-java">
+@SpringBootApplication(proxyBeanMethods = false)
+public class WebsiteApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(WebsiteApplication.class, args);
+    }
+
+}
+</code></pre>
+Interdum et malesuada fames ac ante ipsum primis in
 faucibus. Nam pharetra, justo elementum dignissim auctor, augue ligula pulvinar magna, eu placerat lectus orci et diam.
 Nulla egestas purus et augue vehicula cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada
 fames ac turpis egestas. Praesent pretium facilisis sagittis.
@@ -79,7 +93,18 @@ Vestibulum tempor sagittis orci, vitae sodales odio rhoncus vitae. Duis sagittis
 eu nibh mattis eleifend sed in nunc. Fusce sit amet mi massa. Sed scelerisque purus non turpis hendrerit auctor. Donec
 suscipit, tortor sit amet gravida fringilla, ipsum arcu pulvinar leo, vitae ultrices diam orci nec mi. Maecenas mattis
 placerat turpis a tristique. Nam et massa non erat finibus elementum. Aliquam erat volutpat. In consequat arcu sed
-lacus viverra ullamcorper. Pellentesque congue, erat vel volutpat luctus, purus dolor consequat tellus, sed ullamcorper
+lacus viverra ullamcorper.
+<pre><code class="language-java">
+@SpringBootApplication(proxyBeanMethods = false)
+public class WebsiteApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(WebsiteApplication.class, args);
+    }
+
+}
+</code></pre>
+Pellentesque congue, erat vel volutpat luctus, purus dolor consequat tellus, sed ullamcorper
 lectus ante in dui. Morbi libero nibh, ornare eu finibus nec, aliquam eu elit. Vestibulum aliquet dolor ac auctor auctor.
 Cras sed pulvinar purus, a ornare nisi. Integer sagittis a augue quis malesuada. Sed at tempus velit. Quisque molestie,
 nisi vel iaculis luctus, dolor ipsum dapibus quam, non euismod urna nisi eu purus. Quisque ultrices placerat sodales.
@@ -99,7 +124,18 @@ Suspendisse enim nisl, efficitur a turpis eget, gravida mollis ipsum. In tempus 
 erat congue nec. Proin nulla arcu, viverra mollis sem ac, eleifend luctus lacus. Nunc vitae felis vehicula orci euismod
 vulputate. Suspendisse porttitor volutpat pharetra. Nullam id nulla non lectus pellentesque lacinia ut vitae metus.
 Suspendisse potenti. Mauris et euismod risus. Cras in diam quis justo molestie suscipit convallis sed nunc.
-Aliquam eget ex justo. Proin scelerisque bibendum quam ac sagittis. Vivamus lobortis egestas convallis. In at mollis
+Aliquam eget ex justo. Proin scelerisque bibendum quam ac sagittis.
+<pre><code class="language-java">
+@SpringBootApplication(proxyBeanMethods = false)
+public class WebsiteApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(WebsiteApplication.class, args);
+    }
+
+}
+</code></pre>
+Vivamus lobortis egestas convallis. In at mollis
 risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse viverra
 ante in vulputate aliquet. Mauris finibus, leo at gravida varius, nunc ligula scelerisque nisl, a volutpat mauris magna
 in neque. Nullam ultrices leo nec orci auctor pellentesque. Aliquam gravida ex eros, eget scelerisque erat aliquam non.

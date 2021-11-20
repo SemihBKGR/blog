@@ -1,5 +1,5 @@
 div.content {
-    max-width: 550px;
+    max-width: 600px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     margin: auto;
@@ -23,4 +23,8 @@ div.content .subtitle-list {
 
 div.content img{
     max-width: 100%;
+}
+
+div.content pre{
+    background: lightcyan;
 }
