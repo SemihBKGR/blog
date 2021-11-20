@@ -18,7 +18,7 @@
         <p>[[${currentSubject.explanation}]]</p>
         <div>
             <ul class="list-group">
-                <li class="category-list list-group-item border-0" th:each="category: ${categories}">
+                <li class="category-list-item list-group-item border-0" th:each="category: ${categories}">
                     <a class="text-dark" th:href="'#'+${category.name}">
                         <span class="category-list-icon material-icons">double_arrow</span>
                         [[${category.name}]]
@@ -43,7 +43,7 @@
                     <p>[[${category.explanation}]]</p>
                     <div>
                         <ul class="list-group">
-                            <li class="post-list list-group-item border-0" th:each="postInfo: ${postInfos}"
+                            <li class="post-list-item list-group-item border-0" th:each="postInfo: ${postInfos}"
                                 th:if="${postInfo.categoryId}==${category.id}">
                                 <div>
                                     <a class="text-secondary" th:href="'/'+${currentSubject.urlEndpoint}+'/'+${postInfo.urlEndpoint}">

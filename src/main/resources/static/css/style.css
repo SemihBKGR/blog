@@ -1,65 +1,65 @@
-.app-container {
+div.app-container {
     max-width: 700px;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
 }
 
-.subject {
+div.subject {
     width: 300px;
     margin: auto;
 }
 
-.category {
+div.category {
     width: 500px;
     margin: auto;
 }
 
-.post-list {
+li.post-list-item {
     padding: 0;
 }
 
-.post-title {
+h5.post-title {
     display: inline-block;
     width: 70%;
 }
 
-.post-date-small {
+p.post-date-small {
     display: inline-block;
     float: right;
     font-size: small;
     width: 25%;
 }
 
-.post-date-medium {
+p.post-date-medium {
     display: inline-block;
     float: right;
     font-size: medium;
     width: 25%;
 }
 
-.category-top {
+div.category-top {
     width: 500px;
     margin: auto;
 }
 
-.category-list {
+li.category-list-item {
     padding: 0;
 }
 
-.category-list-icon {
+span.category-list-icon {
     font-size: small;
 }
 
-.img-hover-zoom {
+div.img-hover-zoom {
     width: 85%;
     overflow: hidden;
 }
 
-.img-hover-zoom img {
+div.img-hover-zoom img {
     width: 100%;
     transition: 0.5s all ease-in-out;
 }
 
-.img-hover-zoom:hover img {
+div.img-hover-zoom:hover img {
     transform: scale(1.15);
 }

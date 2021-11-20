@@ -1,0 +1,26 @@
+div.content {
+    max-width: 550px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    margin: auto;
+}
+
+div.content ul li {
+    padding: 0;
+}
+
+div.content a{
+    color: black;
+}
+
+div.content span.material-icons {
+    font-size: small;
+}
+
+div.content .subtitle-list {
+
+}
+
+div.content img{
+    max-width: 100%;
+}
