@@ -28,7 +28,9 @@
         <div class="col" th:each="subject: ${subjects}">
             <div class="subject">
                 <a th:href="${subject.urlEndpoint}" th:if="${subject.imageUrl}!=null">
-                    <img alt="subject image" th:src="${subject.imageUrl}" width="85%">
+                    <div class="img-hover-zoom">
+                        <img alt="subject image" th:src="${subject.imageUrl}">
+                    </div>
                 </a>
                 <a class="text-decoration-none text-dark" th:href="${subject.urlEndpoint}">
                     <h3>[[${subject.name}]]</h3>

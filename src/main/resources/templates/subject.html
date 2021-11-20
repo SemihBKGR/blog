@@ -53,7 +53,9 @@
                             [[${category.name}]]
                         </h3>
                     </a>
-                    <img alt="tag image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}" width="85%">
+                    <div class="img-hover-zoom">
+                        <img alt="tag image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}">
+                    </div>
                     <p>[[${category.explanation}]]</p>
                     <div>
                         <ul class="list-group">
