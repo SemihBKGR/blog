@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navbar</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light" th:fragment="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/">Website</a>
+        <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+            <span th:each="subject: ${subjects}" th:if="${currentSubject}!=null">
+                <a class="nav-item nav-link active" href=javascript:void(0) th:if="${subject.id}==${currentSubject.id}">[[${subject.name}]] <span
+                        class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" th:href="'/'+${subject.urlEndpoint}"
+                   th:unless="${subject.id}==${currentSubject.id}">[[${subject.name}]]</a>
+            </span>
+                <span th:each="subject: ${subjects}" th:unless="${currentSubject}!=null">
+                <a class="nav-item nav-link" th:href="'/'+${subject.urlEndpoint}">[[${subject.name}]]</a>
+            </span>
+            </div>
+        </div>
+    </div>
+</nav>
+</body>
+</html>

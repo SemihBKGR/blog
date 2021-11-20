@@ -10,19 +10,7 @@
     <title>Website</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler"
-            data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#" th:each="subject: ${subjects}">[[${subject.name}]]</a>
-        </div>
-    </div>
-</nav>
+<div th:insert="common/navbar::navbar"></div>
 <div class="container">
     <h1>[[${post.title}]]</h1>
     <p>[[${post.brief}]]</p>

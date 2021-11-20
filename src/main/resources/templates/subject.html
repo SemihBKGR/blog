@@ -11,24 +11,8 @@
     <title>Website/[[${currentSubject.name}]]</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Website</a>
-    <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler"
-            data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <span th:each="subject: ${subjects}">
-                <a class="nav-item nav-link active" href=javascript:void(0) th:if="${subject.id}==${currentSubject.id}">[[${subject.name}]]</a>
-                <a class="nav-item nav-link" th:href="'/'+${subject.urlEndpoint}"
-                   th:unless="${subject.id}==${currentSubject.id}">[[${subject.name}]]</a>
-            </span>
-        </div>
-    </div>
-</nav>
-<div class="container">
+<div th:insert="common/navbar::navbar"></div>
+<div class="app-container container">
     <div class="category-top">
         <h1 class="text-dark">[[${currentSubject.name}]]</h1>
         <p>[[${currentSubject.explanation}]]</p>
