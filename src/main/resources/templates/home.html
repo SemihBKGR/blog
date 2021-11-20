@@ -30,7 +30,7 @@
                             th:if="${postInfo.subjectId}==${subject.id}">
                             <div>
                                 <a class="text-decoration-none text-secondary"
-                                   th:href="'/post/'+${postInfo.urlEndpoint}">
+                                   th:href="'/'+${subject.urlEndpoint}+'/'+${postInfo.urlEndpoint}">
                                     <h5 class="post-title">[[${postInfo.title}]]</h5>
                                 </a>
                                 <p class="post-date-small">[[${postInfo.createTime}]]</p>

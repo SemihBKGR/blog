@@ -31,7 +31,8 @@ public class AppController {
                                 .findLastInfos(subject.getId())))
                 .collectList()
                 .doOnNext(postInfos -> model.addAttribute("postInfos", postInfos))
-                .thenReturn("home");
+                .thenReturn("home")
+                .doOnTerminate(()->model.addAttribute("isHomePage",true));
     }
 
     @GetMapping("/{url-endpoint}")
@@ -58,8 +59,11 @@ public class AppController {
         return postService.find(subjectUrlEndpoint, postUrlEndpoint)
                 .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))
                 .doOnNext(post -> model.addAttribute("post", post))
-                .flatMap(post -> subjectService.find(post.getId()))
-                .doOnNext(subject -> model.addAttribute("subject", subject))
+                .flatMap(post -> subjectService.find(post.getSubjectId()))
+                .doOnNext(subject -> model.addAttribute("currentSubject", subject))
+                .thenMany(subjectService.findAll())
+                .collectList()
+                .doOnNext(subjects -> model.addAttribute("subjects", subjects))
                 .thenReturn("post");
     }
 

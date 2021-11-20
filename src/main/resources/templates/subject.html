@@ -46,7 +46,7 @@
                             <li class="post-list list-group-item border-0" th:each="postInfo: ${postInfos}"
                                 th:if="${postInfo.categoryId}==${category.id}">
                                 <div>
-                                    <a class="text-secondary" th:href="'/post/'+${postInfo.urlEndpoint}">
+                                    <a class="text-secondary" th:href="'/'+${currentSubject.urlEndpoint}+'/'+${postInfo.urlEndpoint}">
                                         <h5 class="post-title">[[${postInfo.title}]]</h5>
                                     </a>
                                     <p class="post-date-medium">[[${postInfo.createTime}]]</p>
