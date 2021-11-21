@@ -1,8 +1,6 @@
 server:
   error:
     path: /error
-    whitelabel:
-      enabled: false
 spring:
   profiles:
     active: dev

@@ -31,14 +31,13 @@
         <ul class="list-group">
             <li class="list-group-item border-0" th:each="category: ${categories}">
                 <div class="category">
-                    <a class="text-dark" th:href="'#'+${category.name}">
+                    <a class="text-dark text-decoration-none" th:href="'#'+${category.name}">
                         <h3 th:id="${category.name}">
-                            <span class="material-icons">link</span>
                             [[${category.name}]]
                         </h3>
                     </a>
-                    <div class="img-hover-zoom">
-                        <img alt="tag image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}">
+                    <div>
+                        <img alt="category image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}" width="85%">
                     </div>
                     <p>[[${category.explanation}]]</p>
                     <div>

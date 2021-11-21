@@ -21,11 +21,6 @@ div.content {
     margin: auto;
 }
 
-div.content a {
-    color: black;
-    text-decoration-line: none;
-}
-
 div.content span.material-icons {
     font-size: small;
 }
@@ -37,4 +32,10 @@ div.content .subtitle-list {
 div.content img {
     max-width: 100%;
     min-width: 25%;
+}
+
+div.content pre{
+    background: white;
+    border-style: solid;
+    border-width: thin;
 }

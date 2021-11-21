@@ -30,8 +30,18 @@ function addLinkInSubtitles(contentId) {
         subtitle.id = subtitle.textContent
         const subtiteLink = document.createElement("a")
         subtiteLink.href = "#" + subtitle.id
+        subtiteLink.classList.add("text-decoration-none")
+        subtiteLink.classList.add("text-dark")
         subtiteLink.textContent = subtitle.textContent
         subtitle.textContent = ""
         subtitle.appendChild(subtiteLink)
+    }
+}
+
+function trimCodes(contentId) {
+    const content = document.getElementById(contentId)
+    const codes = content.getElementsByTagName("code")
+    for (const code of codes) {
+        code.textContent = code.textContent.trim();
     }
 }

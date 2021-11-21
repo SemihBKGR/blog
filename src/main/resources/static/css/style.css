@@ -1,3 +1,7 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
 div.app-container {
     max-width: 700px;
     padding-top: 2.5%;
@@ -21,6 +25,10 @@ li.post-list-item {
 h5.post-title {
     display: inline-block;
     width: 70%;
+}
+
+h5.post-title:hover {
+    text-decoration: underline;
 }
 
 p.post-date-small {
