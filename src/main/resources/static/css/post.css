@@ -1,3 +1,19 @@
+div.subtitle-list {
+    margin: 5%;
+}
+
+div.subtitle-list ul li {
+    padding: 0;
+}
+
+div.subtitle-list ul li a {
+    color: black;
+}
+
+div.subtitle-list ul li span.material-icons {
+    font-size: small;
+}
+
 div.content {
     max-width: 600px;
     padding-top: 2.5%;
@@ -5,12 +21,9 @@ div.content {
     margin: auto;
 }
 
-div.content ul li {
-    padding: 0;
-}
-
-div.content a{
+div.content a {
     color: black;
+    text-decoration-line: none;
 }
 
 div.content span.material-icons {
@@ -21,10 +34,7 @@ div.content .subtitle-list {
 
 }
 
-div.content img{
+div.content img {
     max-width: 100%;
-}
-
-div.content pre{
-    background: lightcyan;
+    min-width: 25%;
 }

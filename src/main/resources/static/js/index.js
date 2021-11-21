@@ -3,8 +3,7 @@ function convertUnixTimeToDate(unixTimestamp) {
     const year = date.getFullYear()
     const month = date.getMonth()
     const day = date.getDay()
-    //return month + '/' + day + '/' + year
-    return '00/00/0000'
+    return month + '/' + day + '/' + year
 }
 
 function addPadDiv(divName) {

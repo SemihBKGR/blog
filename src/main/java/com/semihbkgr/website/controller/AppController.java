@@ -59,8 +59,6 @@ public class AppController {
         return postService.find(subjectUrlEndpoint, postUrlEndpoint)
                 .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))
                 .doOnNext(post -> model.addAttribute("post", post))
-                .flatMap(post -> subjectService.find(post.getSubjectId()))
-                .doOnNext(subject -> model.addAttribute("currentSubject", subject))
                 .thenMany(subjectService.findAll())
                 .collectList()
                 .doOnNext(subjects -> model.addAttribute("subjects", subjects))
