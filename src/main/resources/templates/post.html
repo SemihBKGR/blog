@@ -8,7 +8,7 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/static/css/prism.css" rel="stylesheet"/>
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
     <link href="/static/css/post.css" rel="stylesheet">
     <title>Website</title>
 </head>
@@ -18,7 +18,7 @@
     <h1>[[${post.title}]]</h1>
     <p>[[${post.brief}]]</p>
     <img alt="post image" th:if="${post.imageUrl}!=null" th:src="${post.imageUrl}" width="100%">
-    <div id="subtitle-list" class="subtitle-list"></div>
+    <div class="subtitle-list" id="subtitle-list"></div>
     <div class="content" id="content" th:utext="${post.content}"></div>
 </div>
 <script crossorigin="anonymous"
@@ -30,8 +30,8 @@
 <script src="/static/js/prism.js"></script>
 <script src="/static/js/post.js"></script>
 <script>
-    addLinkInSubtitles("content")
     addSubtitleList("subtitle-list", "content")
+    addLinkInSubtitles("content")
     trimCodes("content")
 </script>
 </body>

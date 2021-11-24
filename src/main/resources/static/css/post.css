@@ -1,46 +1,33 @@
-div.subtitle-list {
-    margin: 5%;
-}
-
-div.subtitle-list ul li {
-    padding: 0;
-}
-
-div.subtitle-list ul li a {
-    color: black;
-}
-
-div.subtitle-list ul li span.material-icons {
-    font-size: small;
+div.subtitle-list{
+    margin-top: 5%;
 }
 
 div.content {
-    max-width: 600px;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin: auto;
+    padding-bottom: 5%;
 }
 
-div.content span.small {
-    font-size: small;
-}
-
-div.content h3 a{
-    color: black;
-    visibility: hidden;
-}
-
-div.content h3:hover{
-
+div.content p {
+    margin: 0;
+    padding: 0;
 }
 
 div.content img {
     max-width: 100%;
     min-width: 25%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
-div.content pre{
+div.content h3 {
+    margin-top: 5%;
+    margin-bottom: 1.5%;
+}
+
+div.content pre {
     background: white;
     border-style: solid;
     border-width: thin;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
+

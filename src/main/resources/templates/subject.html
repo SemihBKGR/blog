@@ -7,7 +7,7 @@
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/index.css" rel="stylesheet">
     <title>Website/[[${currentSubject.name}]]</title>
 </head>
 <body>
@@ -36,8 +36,8 @@
                             [[${category.name}]]
                         </h3>
                     </a>
-                    <div>
-                        <img alt="category image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}" width="85%">
+                    <div class="img-hover-zoom">
+                        <img alt="category image" th:if="${category.imageUrl}!=null" th:src="${category.imageUrl}">
                     </div>
                     <p>[[${category.explanation}]]</p>
                     <div>
@@ -45,7 +45,8 @@
                             <li class="post-list-item list-group-item border-0" th:each="postInfo: ${postInfos}"
                                 th:if="${postInfo.categoryId}==${category.id}">
                                 <div>
-                                    <a class="text-secondary" th:href="'/'+${currentSubject.urlEndpoint}+'/'+${postInfo.urlEndpoint}">
+                                    <a class="text-secondary"
+                                       th:href="'/'+${currentSubject.urlEndpoint}+'/'+${postInfo.urlEndpoint}">
                                         <h5 class="post-title">[[${postInfo.title}]]</h5>
                                     </a>
                                     <p class="post-date-medium">[[${postInfo.createTime}]]</p>
