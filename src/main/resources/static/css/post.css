@@ -21,11 +21,16 @@ div.content {
     margin: auto;
 }
 
-div.content span.material-icons {
+div.content span.small {
     font-size: small;
 }
 
-div.content .subtitle-list {
+div.content h3 a{
+    color: black;
+    visibility: hidden;
+}
+
+div.content h3:hover{
 
 }
 
