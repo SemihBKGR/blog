@@ -7,8 +7,8 @@ import reactor.core.publisher.Mono;
 
 public interface SubjectRepository extends R2dbcRepository<Subject, Integer> {
 
-    Flux<Subject> findAllByOrderByDisplayOrderAsc();
-
     Mono<Subject> findByUrlEndpoint(String urlEndpoint);
+
+    Flux<Subject> findAllByOrderByDisplayOrderAsc();
 
 }

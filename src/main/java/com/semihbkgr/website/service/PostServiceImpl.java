@@ -16,8 +16,8 @@ public class PostServiceImpl implements PostService {
 
 
     @Override
-    public Mono<Post> find(String subjectUrl, String postUrl) {
-        return postRepository.findBySubjectUrlEndpointAndPostUrlEndpoint(subjectUrl,postUrl);
+    public Mono<Post> find(String subjectUrlEndpoint, String postUrlEndpoint) {
+        return postRepository.findBySubjectUrlEndpointAndPostUrlEndpoint(subjectUrlEndpoint,postUrlEndpoint);
     }
 
     @Override
