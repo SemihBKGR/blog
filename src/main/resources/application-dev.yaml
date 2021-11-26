@@ -4,6 +4,9 @@ spring:
     password: password
     url: r2dbc:mysql://localhost:3306/website
     name: website
+  redis:
+    host: localhost
+    port: 6379
 logging:
   level:
     root: info
