@@ -14,7 +14,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Flux<Category> findAllBySubjectId(int subjectId) {
-        return categoryRepository.findAllBySubjectId(subjectId);
+        return categoryRepository.findAllBySubjectId(subjectId).cache();
     }
 
 }

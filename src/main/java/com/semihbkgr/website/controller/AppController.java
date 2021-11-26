@@ -32,7 +32,7 @@ public class AppController {
                 .collectList()
                 .doOnNext(postInfos -> model.addAttribute("postInfos", postInfos))
                 .thenReturn("home")
-                .doOnTerminate(()->model.addAttribute("isHomePage",true));
+                .doOnTerminate(() -> model.addAttribute("isHomePage", true));
     }
 
     @GetMapping("/{url-endpoint}")
