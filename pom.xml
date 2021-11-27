@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.semihbkgr</groupId>
-    <artifactId>website</artifactId>
+    <artifactId>blog</artifactId>
     <version>1.0.0</version>
 
     <properties>
