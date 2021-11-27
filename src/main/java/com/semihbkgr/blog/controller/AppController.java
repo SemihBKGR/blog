@@ -5,6 +5,7 @@ import com.semihbkgr.blog.service.PostService;
 import com.semihbkgr.blog.service.SubjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -71,6 +72,11 @@ public class AppController {
                 .collectList()
                 .doOnNext(subjects -> model.addAttribute("subjects", subjects))
                 .thenReturn("about");
+    }
+
+    @GetMapping("/**")
+    public Mono<String> unmapped(ServerHttpRequest request) {
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Path: %s", request.getPath()));
     }
 
 }

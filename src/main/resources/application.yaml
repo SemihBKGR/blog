@@ -4,8 +4,6 @@ server:
 spring:
   profiles:
     active: dev
-  webflux:
-    static-path-pattern: /static/**
   thymeleaf:
     reactive:
       max-chunk-size: 8192

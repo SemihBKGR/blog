@@ -1,1 +1,3 @@
-# website
+# Blog
+
+Personal blog website project
