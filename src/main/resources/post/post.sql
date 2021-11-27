@@ -1,4 +1,4 @@
-INSERT INTO posts(subject_id, category_id, title, brief, content, url_endpoint, image_url, create_time)
+INSERT INTO posts(subject_id, category_id, title, content, brief, url_endpoint, image_url, create_time)
     VALUE (1, 1,
            'test post',
            '<h3>subtitle-01</h3>
@@ -153,6 +153,6 @@ rutrum nulla id iaculis posuere.
            'Aliquam gravida ex eros, eget scelerisque erat aliquam non.Nulla ut magna a diam consectetur blandit mollis eu velit.
 Aenean quis sem quis urna scelerisque condimentum quis vitaeodio. Cras porttitor purus quis varius tempor. Donec tellus
 urna, mattis eu nulla quis, sodales pulvinar arcu. Nullamrutrum nulla id iaculis posuere.',
-           '/static/image/blue.png',
            'test-post',
+           '/static/images/blue.png',
            UNIX_TIMESTAMP())
