@@ -6,13 +6,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.io.Serializable;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Table("subjects")
-public class Subject implements Serializable {
+public class Subject {
 
     @Id
     private int id;

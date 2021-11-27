@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "cache.expiration.duration",
+      "type": "java.time.Duration",
+      "description": "Description for expiration duration of cache."
+    }
+  ]
+}
