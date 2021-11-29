@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    username: ENC(JG+fK/Tu8IM5Rr/mRXUdCFJAJ8+heBraOdMSFuintHlHj6CYN4kO1bqrTO9Errug)
+    password: ENC(FSG4+3DC4TV4ElSESkPUioRSxDSor7UImWHGLF5UEqCsYgzxb5cRSo2LuPbVTRcS)
+    url: ENC(xfxZB536LVz+owTyYhf2/IYogkQ+ACS/tm9vWorlESAXOSW6oR2ieGRw8AAsEEndHW6aiarXwAY3gxf2MrG+ciGTp3xvnQ8u+/PAIf1m7Yo=)
+    name: website
+logging:
+  level:
+    root: error
