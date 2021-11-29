@@ -2,15 +2,7 @@ spring:
   r2dbc:
     username: user
     password: password
-    url: r2dbc:mysql://localhost:3306/website
-    name: website
-  redis:
-    host: localhost
-    port: 6379
+    url: r2dbc:mysql://localhost:3306/blog
 logging:
   level:
     root: info
-
-cache:
-  expiration:
-    duration: 10M

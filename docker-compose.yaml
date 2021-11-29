@@ -6,15 +6,15 @@ services:
     hostname: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: 'website'
+      MYSQL_DATABASE: 'blog'
       MYSQL_USER: 'user'
       MYSQL_PASSWORD: 'password'
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
       - 3306:3306
     networks:
-      - website
+      - blog
 networks:
-  website:
+  blog:
     driver: bridge
     external: false

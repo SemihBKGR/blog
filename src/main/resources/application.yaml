@@ -1,9 +1,18 @@
 server:
   error:
     path: /error
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore/blog.p12
+    key-store-password: ENC(75ygljJ0hrqJg6tQgC6Dpkb3uU3sJYWmA9I+BTET2Af6pB2cOnjaJGvAE2clTYSm)
+    key-alias: ENC(KD1zvoAyIsbvOGkhm/fpEewA+V6m6q8f836UbWC5dZaF7/LDyWSPdeOWvWPzGlLf)
+    enabled: true
 spring:
   profiles:
     active: dev
   thymeleaf:
     reactive:
       max-chunk-size: 8192
+cache:
+  expiration:
+    duration: 10M
