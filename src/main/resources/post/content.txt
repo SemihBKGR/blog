@@ -11,7 +11,7 @@ Praesent sed nisl non ex semper tristique sed nec metus.
 Vestibulum non magna eget mi ornare viverra nec sed turpis. Curabitur id malesuada quam. Praesent eu porttitor neque,
 vitae ullamcorper leo. Maecenas ultricies tempor diam pellentesque porta. Sed nibh ante, iaculis id pharetra sit amet,
 sollicitudin a sapien. Cras eget neque augue.
-<img src="/static/image/blue.png">
+<img src="/static/images/blue.png">
 Proin suscipit eleifend neque at viverra. Pellentesque ac eros tincidunt,
 faucibus elit nec, bibendum nibh. Proin pharetra suscipit mollis. Praesent dapibus auctor accumsan. Aliquam iaculis
 quis odio ac vulputate. Quisque vestibulum dolor leo, in ultrices libero scelerisque ac. Pellentesque feugiat risus in
@@ -22,7 +22,7 @@ est fermentum facilisis. Vivamus cursus ultrices nibh et elementum.
 Integer et felis leo. Suspendisse pharetra, nisl vel ultricies vulputate, dui dui eleifend nisi, sed hendrerit magna
 magna at diam. Proin nulla metus, ultricies vel lacus vitae, pharetra hendrerit tellus. Aenean commodo felis consequat
 metus vehicula, sit amet iaculis tortor cursus.
-<img src="/static/image/blue.png">
+<img src="/static/images/blue.png">
 Sed pharetra, urna et hendrerit porttitor, augue libero consectetur
 erat, a tincidunt urna orci ac justo. Praesent quis tincidunt tortor. Etiam convallis tincidunt blandit. Donec vel
 rutrum massa. In tempor ullamcorper felis eu gravida.
@@ -52,7 +52,7 @@ Vivamus at metus quam. Curabitur eu tortor ac est tempor commodo et id nisi. Nam
 Maecenas id consequat metus. Sed finibus, neque vitae luctus cursus, erat neque mollis odio, a auctor ex mi eget dui.
 Fusce accumsan nunc sit amet neque tincidunt, at varius mi fermentum. Nunc mollis nec lorem in maximus. Maecenas
 convallis justo et sapien egestas, quis luctus mi bibendum.
-<img src="/static/image/blue.png">
+<img src="/static/images/blue.png">
 Vivamus felis mi, molestie aliquet convallis in, convallis
 rutrum purus. Phasellus vulputate libero augue, id blandit lectus vulputate a. Ut placerat porttitor porta. Cras vitae
 magna vitae arcu imperdiet feugiat dapibus hendrerit enim.
@@ -98,7 +98,7 @@ lectus ante in dui. Morbi libero nibh, ornare eu finibus nec, aliquam eu elit. V
 Cras sed pulvinar purus, a ornare nisi. Integer sagittis a augue quis malesuada. Sed at tempus velit. Quisque molestie,
 nisi vel iaculis luctus, dolor ipsum dapibus quam, non euismod urna nisi eu purus. Quisque ultrices placerat sodales.
 Sed commodo neque id mauris varius, vitae vestibulum mauris aliquam.
-<img src="/static/image/blue.png">
+<img src="/static/images/blue.png">
 Pellentesque in quam quis nisl cursus scelerisque
 vitae a justo. Ut ac nisl non ligula aliquam malesuada. Proin sit amet lacinia neque, quis posuere nibh. Orci varius
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi non dapibus nunc. Sed pulvinar, ante

@@ -2,18 +2,14 @@
 
 Personal blog website project
 
-Add VM options to decrypt properties
-
-> -Djasypt.encryptor.password=<password>
-
-### Certificate
-
-> keytool -genkeypair -alias <alias> -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore <filename>.p12 -validity 3650
+[link](https://semihbkgr.com)
 
 ### Encryption
 
-> mvn jasypt:encrypt-value -Djasypt.encryptor.password=<password> -Djasypt.plugin.value=<value>
+Maven goal to encrypt properties
 
-JVM options
+> mvn jasypt:encrypt-value -Djasypt.encryptor.password=< password > -Djasypt.plugin.value=< value >
 
-> -Djasypt.encryptor.password=<password>
+VM option to decrypt properties
+
+> -Djasypt.encryptor.password= < password >
