@@ -1,9 +1,9 @@
-INSERT INTO `website`.`subjects` (`id`, `name`, `explanation`, `url_endpoint`, `image_url`, `display_order`)
+INSERT INTO `blog`.`subjects` (`id`, `name`, `explanation`, `url_endpoint`, `image_url`, `display_order`)
 VALUES (1, 'subject-01', 'subject-01 explanation', 'subject-01', '/static/images/blue.png', 1),
        (2, 'subject-02', 'subject-02 explanation', 'subject-02', '/static/images/blue.png', 2),
        (3, 'subject-03', 'subject-03 explanation', 'subject-03', '/static/images/blue.png', 3);
 
-INSERT INTO website.categories (`id`, `name`, `explanation`, `image_url`, `display_order`)
+INSERT INTO blog.categories (`id`, `name`, `explanation`, `image_url`, `display_order`)
 VALUES (1, 'category-01', 'category-01 explanation', '/static/images/blue.png', 1),
        (2, 'category-02', 'category-02 explanation', '/static/images/blue.png', 1),
        (3, 'category-03', 'category-03 explanation', '/static/images/blue.png', 1),
@@ -14,7 +14,7 @@ VALUES (1, 'category-01', 'category-01 explanation', '/static/images/blue.png', 
        (8, 'category-08', 'category-08 explanation', '/static/images/blue.png', 3),
        (9, 'category-09', 'category-09 explanation', '/static/images/blue.png', 3);
 
-INSERT INTO website.posts(`subject_id`, `category_id`, `title`, `brief`, `content`, `url_endpoint`, `image_url`,
+INSERT INTO blog.posts(`subject_id`, `category_id`, `title`, `brief`, `content`, `url_endpoint`, `image_url`,
                           `display_order`, `create_time`)
 VALUES (1, 1, 'post-01', 'post-01 brief', 'post-01 content', 'post-01', '/static/images/blue.png', 1, UNIX_TIMESTAMP()),
        (2, 2, 'post-02', 'post-02 brief', 'post-02 content', 'post-02', '/static/images/blue.png', 1, UNIX_TIMESTAMP()),

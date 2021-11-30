@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS `website`.`posts`;
-DROP TABLE IF EXISTS `website`.`categories`;
-DROP TABLE IF EXISTS `website`.`subjects`;
+DROP TABLE IF EXISTS `blog`.`posts`;
+DROP TABLE IF EXISTS `blog`.`categories`;
+DROP TABLE IF EXISTS `blog`.`subjects`;
 
-CREATE TABLE `website`.`subjects`
+CREATE TABLE `blog`.`subjects`
 (
     `id`            INT AUTO_INCREMENT,
     `name`          VARCHAR(16) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `website`.`subjects`
     UNIQUE INDEX (url_endpoint)
 );
 
-CREATE TABLE `website`.`categories`
+CREATE TABLE `blog`.`categories`
 (
     `id`            INT AUTO_INCREMENT,
     `name`          VARCHAR(32) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE `website`.`categories`
     UNIQUE INDEX (name)
 );
 
-CREATE TABLE `website`.`posts`
+CREATE TABLE `blog`.`posts`
 (
     `id`            INT AUTO_INCREMENT,
     `subject_id`    INT         NOT NULL,

@@ -3,7 +3,12 @@
     {
       "name": "cache.expiration.duration",
       "type": "java.time.Duration",
-      "description": "Description for expiration duration of cache."
+      "description": "Duration of cache expiration."
+    },
+    {
+      "name": "server.redirection.port",
+      "type": "java.lang.Integer",
+      "description": "Port of redirection server."
     }
   ]
 }

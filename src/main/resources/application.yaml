@@ -1,4 +1,7 @@
 server:
+  port: 443
+  redirection:
+    port: 80
   error:
     path: /error
   ssl:
