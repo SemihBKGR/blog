@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>navbar</title>
+    <title>Navbar</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-light bg-light" th:fragment="navbar">
     <div class="container">
-        <a class="navbar-brand" href="javascript:void(0)" th:if="${isHomePage}">Website</a>
-        <a class="navbar-brand" href="/" th:unless="${isHomePage}">Website</a>
+        <a class="navbar-brand" href="javascript:void(0)" th:if="${isHomePage}">Home</a>
+        <a class="navbar-brand" href="/" th:unless="${isHomePage}">Home</a>
         <button aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler" data-target="#navbarNavAltMarkup" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
