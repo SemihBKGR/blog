@@ -15,7 +15,7 @@ VALUES (1, 'category-01', 'category-01 explanation', '/static/images/blue.png', 
        (9, 'category-09', 'category-09 explanation', '/static/images/blue.png', 3);
 
 INSERT INTO blog.posts(`subject_id`, `category_id`, `title`, `brief`, `content`, `url_endpoint`, `image_url`,
-                          `display_order`, `create_time`)
+                       `display_order`, `create_time`)
 VALUES (1, 1, 'post-01', 'post-01 brief', 'post-01 content', 'post-01', '/static/images/blue.png', 1, UNIX_TIMESTAMP()),
        (2, 2, 'post-02', 'post-02 brief', 'post-02 content', 'post-02', '/static/images/blue.png', 1, UNIX_TIMESTAMP()),
        (3, 3, 'post-03', 'post-03 brief', 'post-03 content', 'post-03', '/static/images/blue.png', 1, UNIX_TIMESTAMP()),

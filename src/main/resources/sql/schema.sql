@@ -32,7 +32,7 @@ CREATE TABLE `blog`.`posts`
     `subject_id`    INT         NOT NULL,
     `category_id`   INT         NOT NULL,
     `title`         VARCHAR(64) NOT NULL,
-    `brief`         MEDIUMTEXT    NOT NULL,
+    `brief`         MEDIUMTEXT  NOT NULL,
     `content`       LONGTEXT    NOT NULL,
     `url_endpoint`  VARCHAR(64) NOT NULL,
     `image_url`     VARCHAR(256),

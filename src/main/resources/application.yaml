@@ -1,7 +1,7 @@
 server:
-  port: 443
+  port: 80
   redirection:
-    port: 80
+    port: 0
   error:
     path: /error
   ssl:
@@ -9,7 +9,7 @@ server:
     key-store: classpath:keystore/blog.p12
     key-store-password: ENC(ATt/mI8592l6T2OOC7lRPkG/6tg7+tAh7eqhEwhdAc7ZdLVjAnGz20xm8blTxwLP)
     key-alias: ENC(YgtsiJELvr96dZpiih3TT0r6rOa8oXGZCHxLxy7Vph11tGQvP6atukjor/f+EDev)
-    enabled: true
+    enabled: false
 spring:
   profiles:
     active: dev

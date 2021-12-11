@@ -21,8 +21,10 @@ public class ServerConfig {
 
     private final WebServer redirectionServer;
 
-    public ServerConfig(@Value("${server.port}") int port, @Value("${server.redirection.port:0}") int redirectionPort) {
-        if (redirectionPort > 0) {
+    public ServerConfig(@Value("${server.ssl.enabled:#{false}}") boolean sslEnabled,
+                        @Value("${server.port}") int port,
+                        @Value("${server.redirection.port:0}") int redirectionPort) {
+        if (sslEnabled && redirectionPort > 0) {
             NettyReactiveWebServerFactory httpNettyReactiveWebServerFactory = new NettyReactiveWebServerFactory(redirectionPort);
             this.redirectionServer = httpNettyReactiveWebServerFactory.getWebServer((request, response) -> {
                 URI uri = request.getURI();

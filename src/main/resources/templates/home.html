@@ -14,7 +14,7 @@
 <div class="app-container container">
     <div th:if="${#lists.size(subjects)} == 0">
         <h3>Coming soon</h3>
-        <a class="text-info" href="https://github.com/SemihBKGR/blog" target="_blank" >Source code</a>
+        <a class="text-info" href="https://github.com/SemihBKGR/blog" target="_blank">Source code</a>
     </div>
     <div class="row" th:unless="${#lists.size(subjects)}==0">
         <div class="col" th:each="subject: ${subjects}">
